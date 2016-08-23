@@ -9,11 +9,12 @@
 
 
 ##Exercises
-1. [Chapter 3] (./chapter3)
+1. [Chapter 3. Functions and Fundamentals] (./chapter3)
+2. [Chapter 4. Wielding Functions] (./chapter4)
 
 
 ##Resources
 
 1. Eloquent JavaScript Book (1-4).
-2. Secrets of the JavaScript Ninja.
+2. [Secrets of the JavaScript Ninja.] (http://webandbeer.com.ar/wp-content/uploads/2014/11/SecretsOfTheJavaScriptNinja.pdf)
 
