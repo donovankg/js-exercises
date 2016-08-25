@@ -64,13 +64,14 @@ console.log(myMath.fact());
 
     Example:
     ```javascript
-    var data = new Array (1600); // 40 x 40 px dummy image data 
-    var img = new Image (data, 40, 40, ‘myImage’); 
-    img.width; // 40 
-    img.height; // 40 
-    img.name; // ‘myImage’ 
-    
-    img.pixelData (20, 4); // returns the color of the pixel at that position. 
+   image={
+	name: 'myImage',
+	width: 40,
+	height: 40,
+	data: 1600,
+	pixelData: Array(20, 4)
+}
+console.log(image);
     ```
 
 5. Create a function that will print out the properties of an object.  
