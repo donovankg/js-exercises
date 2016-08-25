@@ -37,9 +37,24 @@ console.log(add(list));
 
     Example: 
     ```javascript
-    var a = myMath.add (1, 2, 3); //6 var b = myMath.mul (1, 2, 3); // 6 
-    
-    var c = myMath.fact ( 3); // 6 
+var myMath = {
+	one   :1,
+	two   :2,
+	three :3,
+	adds: function(){
+		return this.one + this.two + this.three;
+	},
+	mul: function(){
+		return this.one * this.two * this.three;
+	},
+	fact: function(){
+		return this.one / this.two / this.three;
+	}
+}
+console.log(myMath.adds());
+console.log(myMath.mul());
+console.log(myMath.fact());
+
     ```
     
     Use of anonymous functions and functions as object properties (methods.)  
