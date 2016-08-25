@@ -68,7 +68,7 @@ console.log(myMath.fact());
 	name: 'myImage',
 	width: 40,
 	height: 40,
-	data: 1600,
+	data: Array(4,4),
 	pixelData: Array(20, 4)
 }
 console.log(image);
