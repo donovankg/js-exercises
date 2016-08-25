@@ -70,7 +70,7 @@ console.log(myMath.fact());
 	height: 40,
 	data: Array(4,4),
 	pixelData: Array(20, 4)
-}
+};
 console.log(image);
     ```
 
