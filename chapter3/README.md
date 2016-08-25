@@ -3,7 +3,14 @@
 
     Example: 
     ```javascript
-    var answer = mul (9, 6); // 42 
+    function multi(one, two){
+	    var temp= one * two;
+	    return (temp-(Math.floor(temp/13)*3));
+	}
+
+var answer = multi (9,6);
+console.log(answer);
+
     ```
     Basic function creation together with built­in JS Math functionality. 
 
@@ -11,7 +18,18 @@
 
     Example: 
     ```javascript
-    var answer = add (1, 2) + add ( 1, 4, 6, 7, 2); 
+    var list= [1, 4, 6, 7, 2];
+var total= 0;
+function add(array){
+    function subadd(array){
+    	for(var i =0; i < list.length; i++)
+    	total=total+list[i];
+    	return total;
+	}
+	return subadd(array);
+}
+console.log(add(list));
+
     ```
     Dynamic argument list handling with JS 
 
