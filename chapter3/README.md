@@ -82,13 +82,28 @@ console.log(image);
 
   Example: 
   ```javascript
-  function CustomObject (a, b) { 
-    this.a = a; 
-    this.b = b; 
-  } 
-  CustomObject.prototype.c = function () { return this.a + this.b; }; 
-  var obj = new CustomObject (1, 2); 
-  printObjProp (obj); // output: a, b, c
-  printObjProp (obj, false); // output: a, b, c 
-  printObjProp (obj, true); // output: a, b 
+  unction printObjProp(test, check){
+	var output ="";
+	for(var key in obj){
+		if((check!==true)||(key!=='c')){
+		if(obj.hasOwnProperty(check)===false){
+			 output= output +' '+key;
+			}
+		}
+	}
+	console.log(output);
+}
+
+function CustomObject (a, b) { 
+  this.a = a; 
+  this.b = b;
+} 
+CustomObject.prototype.c = function () { return this.a + this.b; };
+
+var obj = new CustomObject (1, 2);
+
+printObjProp (obj); // output: a, b, c
+printObjProp (obj, false); // output: a, b, c 
+printObjProp (obj, true); // output: a, b 
+
   ```
