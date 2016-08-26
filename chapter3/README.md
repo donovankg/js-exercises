@@ -69,9 +69,13 @@ console.log(myMath.fact());
 	width: 40,
 	height: 40,
 	data: Array(4,4),
-	pixelData: Array(20, 4)
+	pixelData: Array(20, 4),
+	report:function(){
+		console.log(this)
+	}
 };
-console.log(image);
+
+console.log(image.report());
     ```
 
 5. Create a function that will print out the properties of an object.  
