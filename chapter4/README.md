@@ -4,7 +4,20 @@
 
     Example: 
     ```javascript
-    var n = fibonacci (4); // 3 var m = fibonacci (9); // 34 
+    function fb(number){
+        var current = 1;
+        var back = 0;
+        var newn = 0;
+	for(i = 0; i < number;i){
+		newn = current + back;
+		back = current;
+		current = newn;
+
+		number--;
+	}
+			console.log(current);
+}
+fb(6);
     ```
     Use of recursion. 
 
