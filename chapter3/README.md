@@ -82,7 +82,7 @@ console.log(image);
 
   Example: 
   ```javascript
-  unction printObjProp(test, check){
+  function printObjProp(test, check){
 	var output ="";
 	for(var key in obj){
 		if((check!==true)||(key!=='c')){
