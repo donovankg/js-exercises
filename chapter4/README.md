@@ -25,7 +25,12 @@ fb(6);
 
     Example: 
     ```javascript
-    var arr = [ 1, 3, 5, 7]; var sum = addRec (arr); // 16 
+	var arr = [ 1, 3, 5, 7]; 
+	var sum = addRec (arr); // 16 
+	function addRec(arr){
+		return arr.length>1 ? arr.pop() + addRec(arr):arr[0];
+	}
+	console.log(sum);
     ```
     Use of recursion. 
 
