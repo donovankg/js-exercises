@@ -79,13 +79,16 @@ console.log(typeOf(ataType));
 
     Example: 
     ```javascript
-    function distance(x1, x2, y1, y2, z1, z2){
-	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){
-		console.log('The values given were not valid.');
+    ffunction distance(x1, x2, y1, y2, z1, z2){
+	if((x1===null)||((x2===null))||((y1===null))||((y2===null))){
+	   return console.log('One or more of the values were not numbers');
+	}
+	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){	
+		return console.log('One or more of the values were null');
 	}
 	if((z1===null) ||(z2===null)){
-		return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
-	}	
+	    return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
+	}   
 	return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2) + Math.pow((z1-z2),2));
 }
 console.log(distance(1, 2, 2, 2, 1, 4));
