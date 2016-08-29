@@ -63,7 +63,20 @@ console.log(setter(1));
 
     Example: 
     ```javascript
-    dataType (1, 6.2831, “pi*2”, [function(){}, 1], {}, function () {});  // number, float, string, array, object, function 
+ function test(obj){
+	var value = {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
+	return console.log(value);
+}
+function typeOf (value) {
+	for(var i = 0; i < ataType.length; i++){
+		test(ataType[i]);
+	}
+}
+
+var ataType = [1, 6.2831, 'pi*2', [function(){}, 1], {}, function () {}];
+console.log(typeOf(ataType));
+
+     
     ```
     
     Variable argument functions & data types 
