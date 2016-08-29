@@ -79,10 +79,17 @@ console.log(typeOf(ataType));
 
     Example: 
     ```javascript
-    var x1 = 1, y1 = 2, z1 = 1; 
-    var x2 = 2, y2 = 2, z2 = 4; 
-    var delta1 = distance (x1, y1, x2, y2); // delta = 1 var delta2 = distance (x1, y1, z1, x2, y2, z2); // delta = 3.1622… 
-    distance (x1, x2); // should throw an error: Insufficient parameters 
+    function distance(x1, x2, y1, y2, z1, z2){
+	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){
+		console.log('The values given were not valid.');
+	}
+	if((z1===null) ||(z2===null)){
+		return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
+	}	
+	return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2) + Math.pow((z1-z2),2));
+}
+console.log(distance(1, 2, 2, 2, 1, 4));
+
     ```
     Function overloading and validation
 
