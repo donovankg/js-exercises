@@ -100,8 +100,21 @@ console.log(distance(1, 2, 2, 2, 1, 4));
 
     Example: 
     ```javascript
-    distance (1, 2, 2, 2); // returns 1 (done as part of exercise 5) distance ([1,2], [2,2]); // returns 1 
-    distance ([1,2], [2,2,4]); // error: incompatible point data 
+    /* Make the function from exercise 5 accept its parameters as either a parameter list or as two arrays containing 2D or 3D point data.
+Example:
+distance (1, 2, 2, 2); // returns 1 (done as part of exercise 5) distance ([1,2], [2,2]); // returns 1 
+distance ([1,2], [2,2,4]); // error: incompatible point data 
+*/
+function distance(x1, x2, y1, y2){
+	if((x1===null)||((x2===null))||((y1===null))||((y2===null))){
+	   return console.log('One or more of the values were not numbers');
+	}
+	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){   
+	 return console.log('One or more of the values were null');
+	}
+	return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
+}
+console.log(distance(1, 2, 2, 2));
     ```
     
     Function overloading and validation 
