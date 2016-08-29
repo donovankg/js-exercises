@@ -4,20 +4,24 @@
 
     Example: 
     ```javascript
-    function fb(number){
-        var current = 1;
-        var back = 0;
-        var newn = 0;
-	for(i = 0; i < number;i){
-		newn = current + back;
-		back = current;
-		current = newn;
-
-		number--;
+    var input;
+var current = 1;
+var total = 0;
+var back = 0;
+function fb2(value){
+	input = value;
+	for (var i = 0; i < input; i++){
+	    newn = current + back;
+	    back = current;
+	    current = newn;
+		input = input -1;
+		fb2(input);
 	}
-			console.log(current);
+	return current;
 }
-fb(6);
+
+console.log(fb2(6));
+
     ```
     Use of recursion. 
 
