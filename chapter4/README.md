@@ -41,6 +41,23 @@ fb(6);
     b. It must hold ONLY numbers.  
     
     Validation, setters & getters, private variables 
+    ```javascript
+    function getter(num){
+	var x = num;
+	return x;
+}
+function setter(num){
+	if(isNaN(num)){
+		console.log('this is not a number');
+		return;
+	}else{
+		return getter(num);
+	}
+}
+console.log(setter(1));
+
+    
+    ```
 
 4. Write a function that will accept any number of arguments and print out their data type. 
 
