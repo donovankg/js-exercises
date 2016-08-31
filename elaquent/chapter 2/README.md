@@ -9,7 +9,7 @@ problem 1.
 		console.log(thing);
 		thing = thing+"#";
 	}
-	```javascript
+
 //output
 //#
 //##
@@ -18,7 +18,7 @@ problem 1.
 //#####
 //######
 //#######
-	```
+
 ```
 problem 2.
 ```javascript
