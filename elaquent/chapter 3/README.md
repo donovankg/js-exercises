@@ -13,6 +13,7 @@ function min(first,second){
 	}
 console.log(min(1,2));
 //output
+//1 is less
 ```
 problem 2.
 ```javascript
@@ -27,6 +28,7 @@ function isEven(number){
 		}
 console.log(isEven(50));
 //output
+//even
 ```
 problem 3.
 ```javascript
@@ -54,6 +56,8 @@ var string ="this is a tebt Btring";
 	console.log(countBs());
 console.log(countChar());
 //output
+//1
+//3
 ```
 problem 4.
 ```javascript
@@ -72,4 +76,5 @@ function fb(number){
 		}
 fb(6);
 //output
+//13
 ```
