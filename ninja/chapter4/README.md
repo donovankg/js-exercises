@@ -79,7 +79,7 @@ console.log(typeOf(ataType));
 
     Example: 
     ```javascript
-    ffunction distance(x1, x2, y1, y2, z1, z2){
+    function distance(x1, x2, y1, y2, z1, z2){
 	if((x1===null)||((x2===null))||((y1===null))||((y2===null))){
 	   return console.log('One or more of the values were not numbers');
 	}
