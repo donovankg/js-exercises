@@ -140,10 +140,10 @@ Fizz
 Fizz
 Buzz
 */
-	```
-	problem 3.
-	```javascript
-	//code
+```
+problem 3.
+```javascript
+//code
 	
 //problem 3
 var output ="";
