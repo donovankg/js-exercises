@@ -18,6 +18,8 @@ problem 1.
 	console.log(test());
 	console.log(newArray);
 //output
+//[ 11, 7, 5, 3, 2 ]
+//[ 2, 3, 5, 7, 11 ]
 ```
 problem 2.
 ```javascript
@@ -33,6 +35,7 @@ problem 2.
 }
 console.log(ranges(0, 10));
 //output
+//55
 ```
 problem 3.
 ```javascript
@@ -56,7 +59,7 @@ function nth(list, n){
 	}
 console.log(nth(list,1));
 //output
-
+//{ value: 2, next: { value: 3, next: null } }
 ```
 problem 4.
 ```javascript
@@ -93,4 +96,16 @@ var car1={
 	}
 	deepEqual(car1, car2); 
 //output
+//Object1.color contains red
+//Object1.type contains car
+//Object1.make contains [object Object]
+//Object1.tires contains 4
+//Object1.doors contains 2
+//Object1.year contains 1998
+//Object2.color contains undefined
+//Object2.type contains undefined
+//Object2.make contains undefined
+//Object2.color contains red
+//Object2.type contains car
+//Object2.make contains [object Object]
 ```
