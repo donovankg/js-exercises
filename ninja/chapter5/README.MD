@@ -84,7 +84,7 @@ function Bank(name){
     4. The new tech­support employee must be able to find users and equipment as quickly as possible. 
 
   Use of memoization and implementation of a simple searching algorithm. 
-  ```javasript
+  ```javascript
   building={
 	F1:{
 		R1:["pc","mouse"],
