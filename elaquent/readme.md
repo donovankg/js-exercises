@@ -1,1 +1,3 @@
-Elaquent work book problems.
+##Elaquent workbook
+#chapters 2, 3, & 4.
+

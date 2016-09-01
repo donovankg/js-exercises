@@ -3,7 +3,8 @@
 	var acc = bankInstance.createAccount("long", 1, "hi");
 	acc.getNumber("hi");
 	var anishacct = bankInstance.createAccount("Anish", 100000, "gohome");
-	anishacct.getNumber("gohome");
+	console.log(anishacct.getNumber("gohome"));
+
 	//Inner funtion
 	function Bank(name){
 		
@@ -23,8 +24,7 @@
 					name: accounts[accId].name,
 					amount: accounts[accId].amount
 				};
-			},
-			
+			},	
 	//balance
 			getBalance: function(key1) {
 				if(key==key1)
@@ -46,5 +46,5 @@
 			}
 		};
 	};
+	
 }
-console.log();
