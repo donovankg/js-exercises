@@ -4,8 +4,6 @@ problem 1.
 ```javascript
 //code
 <!doctype html>
-<script src="code/mountains.js"></script>
-<script src="code/chapter/13_dom.js"></script>
 <style>  /* Defines a cleaner look for tables */  
 table{
 	border-collapse: collapse;
