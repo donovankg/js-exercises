@@ -26,17 +26,17 @@
   Use of regular expressions, and lookup tables 
   
 3. Write an expression that would satisfy at least one match for: 
-  1. .abc amything.abc
-  2. a+b?!!1{4} ab!!1111
-  3. .{3}a\.b 123a1b
-  4. \w 'hi' (word character)
-  5. \s ' ' (whitespace)
-  6. \d 2 (digit)
+  1. .abc       something else.abc
+  2. a+b?!!1{4}         ab!!1111
+  3. .{3}a\.b   123a1b
+  4. \w 'hi'    (word character)
+  5. \s ' '     (whitespace)
+  6. \d 2       (digit)
   7. . 
-  8. [abc] a
-  9. (abc) abc
-  10. [a­zA­Z_\$\.]+[A­Za­z_\$0­9\.]*@[a­zA­Z_\$\.]+[a­zA­Z_\$0­9\.]*\.(com|net|org){1} donovan1@email.net 
-  11. \([0oOn]{1}(_|\s)[0oOn]{1}\) o|o
+  8. [abc]      a
+  9. (abc)      abc
+  10. [a­zA­Z_\$\.]+[A­Za­z_\$0­9\.]*@[a­zA­Z_\$\.]+[a­zA­Z_\$0­9\.]*\.(com|net|org){1}         donovan1@email.net 
+  11. \([0oOn]{1}(_|\s)[0oOn]{1}\)      o|o
 
 4.  Write a regular expression that can match: 
 
