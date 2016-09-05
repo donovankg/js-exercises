@@ -55,6 +55,8 @@
         
         
         getDate("07/04/2014");
+        //output
+        //English US 07/04/2014(Independence Day). Spanish MX04/07/2014'
         
   Use of regular expressions, and lookup tables 
   
