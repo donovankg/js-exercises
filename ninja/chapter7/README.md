@@ -127,6 +127,30 @@
           1. aBc = bCd 
           2. xyz = yza 
           3. aK89 = bL90 
+          
+        function shift(value){
+                var letters = /(\w)/g;
+                var lttr = letters.exec(value);
+                var valueArray = [];
+                while(lttr){
+                valueArray.push(oneUp(lttr[0]));
+                lttr = letters.exec(value);
+                }
+                return valueArray.join("");
+                }
+                function oneUp(char){
+                        switch (char.charCodeAt(0)) {
+                case 90:
+                	return String.fromCharCode(65);
+                case 122:
+                	return String.fromCharCode(97);
+                case 57:
+                	return String.fromCharCode(48);
+                default:
+                	return String.fromCharCode(char.charCodeAt(0)+1);
+                }
+        }
+        console.log(shift('abc'));
 
   2. From a reasonably sized text, have a user defined string be replaced by that same string with a hashtag.
   That hashtag should be a link for a twitter search as well.  
