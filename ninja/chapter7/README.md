@@ -47,7 +47,7 @@
           2. February 99, 0001 
           3. June 04, 3000 
       
-                <####day./(\d+),\s?(\d+)/
+                <####day>./(\d+),\s?(\d+)/
   2. A letter followed OR preceded by a number 
     
           Examples:
