@@ -159,3 +159,8 @@
           text: ...should never use yolo for any reason...
           input. String: yolo 
           output. ... should never use #yolo for any reason ...  
+                var string ="...should never use yolo for any reason...";
+                function replace(value1, value2){
+                        return string.replace(value1, value2);
+                }
+                replace("yolo","#yolo");
