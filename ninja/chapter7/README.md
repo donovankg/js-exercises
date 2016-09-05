@@ -18,8 +18,43 @@
 2. Create a function that will transform a U.S style date format into a format of a different                                 language/region. If that date is a holidays on the target locale (language & region), it                             should be mentioned. ​Preferably, use a different language from that of the example. 
 
         Example: 
-        English­US: 09/16/2014 → Spanish­MX: 16/09/2014 (Dia de la independencia)  
-        Spanish­MX: 1/4/2014 → English­US: 4/1/2014 (April fools day) 
+        //English­US: 09/16/2014 → Spanish­MX: 16/09/2014 (Dia de la independencia)  
+        //Spanish­MX: 1/4/2014 → English­US: 4/1/2014 (April fools day) 
+        var usHoliday = {
+        "09/05": "Labor Day",
+        "07/04": "Independence Day",
+        "04/01": "April Fools Day"
+        };
+        var mxHoliday = {
+        "9/16": "Dia de la independencia",
+        "04/01": "April Fools Day"
+        };
+        
+        
+        function getDate(en){
+        var result = /(\d{1,2})\/(\d{1,2})\/(\d{4})/.exec(en);
+        var month = result[1];
+        var day = result[2];
+        var year = result[3];
+        var usString = 'English US '+month+"/"+day+"/"+year;
+        var spString = '. Spanish MX'+day+"/"+month+"/"+year;
+        
+        return usString+getUsHoliday(month,day)+spString+getMxHoliday(month,day);
+        }
+        
+        function getUsHoliday(month,day){
+        var key = month+"/"+day;
+        return usHoliday.hasOwnProperty(key) ? "("+usHoliday[key]+")" : "";
+        }
+        
+        function getMxHoliday(month,day){
+        var key = month+"/"+day;
+        return mxHoliday.hasOwnProperty(key) ? "("+mxHoliday[key]+")" : "";
+        }
+        
+        
+        
+        getDate("07/04/2014");
         
   Use of regular expressions, and lookup tables 
   
