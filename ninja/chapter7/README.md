@@ -1,7 +1,10 @@
 1. Create a function that will transform a hex number into an rgb format. 
 
         Example: 
-        “#3020ff”  →  “rgb ( 48, 32, 255)” 
+        “#3020ff”  →  “rgb ( 48, 32, 255)”
+        ```Javascript
+        test
+        ```
 
   Use of regular expressions 
   
