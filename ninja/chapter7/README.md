@@ -47,6 +47,7 @@
           2. February 99, 0001 
           3. June 04, 3000 
       
+                <####day./(\d+),\s?(\d+)/
   2. A letter followed OR preceded by a number 
     
           Examples:
@@ -54,32 +55,34 @@
           2. d747 
           3. 27X 
           4. v2 
-
+                /\d*([a-zA-Z])\d*/g
   3. txt, java, and cpp files with names consisting of only letters 
     
           Examples: 
           1. test.java 
           2. program.cpp 
           3. newReport.txt 
-
+                /\.(\w{3})/
   4. A 5 character palindrome 
   
           Example:
           1. abcba 
           2. 12321 
           3. _1a1_ 
-
+                /(.)(.).\2\1/
   5. All words that consist of letters from b to y only 
          
           Example 
           input​: “Bee zapp Crow Eagle Zorro  mouse Ape  you” 
           output​: [“Bee”,”Crow”,”mouse”,”you”]
-    
+                /*[b-y]*/
+
   6. All the non nested tag elements in a string 
-        
+
           Example 
           input​: “Is <b>4 < ­1/12</b> true? The <b>answer</b> will <em>surprise</em> you.” 
           output​: <b> 4 < ­1/12</b>, <b>answer</b>, <em>surprise</em> 
+                /<(\w*)>(.*?)<\/\1>/g
 
 5. Write a program that will: 
 
