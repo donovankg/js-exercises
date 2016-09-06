@@ -67,7 +67,7 @@
   4. \w 'hi'    (word character)
   5. \s ' '     (whitespace)
   6. \d 2       (digit)
-  7. . 
+  7. . (any one character)
   8. [abc]      a
   9. (abc)      abc
   10. [a­zA­Z_\$\.]+[A­Za­z_\$0­9\.]*@[a­zA­Z_\$\.]+[a­zA­Z_\$0­9\.]*\.(com|net|org){1}         donovan1@email.net 
