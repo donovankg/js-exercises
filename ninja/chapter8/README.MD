@@ -24,4 +24,29 @@ var output = setInterval(minMax, 60000);
 2. Create functions A, B, and C that execute every 30s, 1min, and 1min 15s respectively.                             Use only 1 timer/interval to control all three functions.  
 
   use of a central timer controller 
+	```javascript
+var timer = 0;
+function a(){
+	return(console.log('this is set a'));
+}
+function b(){
+	console.log('this is set b');
+}
+function c(){
+	console.log('this is set c');
+}
+function group(){
+	timer +=15000;
+	if(timer%30000 ===0){
+		a();
+	}
+	if(timer%60000 ===0){
+		b();
+	}
+	if(timer%75000 ===0){
+		c();
+	}
+}
 
+setInterval(group,15000);
+```
