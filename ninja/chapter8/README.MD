@@ -25,28 +25,56 @@ var output = setInterval(minMax, 60000);
 
   use of a central timer controller 
 	```javascript
-var timer = 0;
-function a(){
-	return(console.log('this is set a'));
-}
-function b(){
-	console.log('this is set b');
-}
-function c(){
-	console.log('this is set c');
-}
-function group(){
-	timer +=15000;
-	if(timer%30000 ===0){
-		a();
+	var timers = {
+		timerID: 0,
+		timers: [],
+		iteration: 0,
+		add: function(fn) {
+			this.timers.push(fn)
+	},
+	start: function() {
+	  if(this.timerID) return;
+	  (function runNext() {
+	    if (timers.timers.length > 0) {
+	      for(var i = 0; i < timers.timers.length; i++){
+	        if((timers.iteration%timers.timers[i].interval === 0) || (!timers.timers[i])){
+	          if (timers.timers[i].fun() === false){
+	            timers.timers.splice(i,1);
+	            i--;
+	          }
+	        }
+	      }
+	      timers.iteration++;
+	      timers.timersID = setTimeout(runNext,15000);
+	    }
+	  })();
+	},
+	stop: function() {
+		clearTimeout(this.timerID);
+		this.timerID = 0;
 	}
-	if(timer%60000 ===0){
-		b();
-	}
-	if(timer%75000 ===0){
-		c();
-	}
-}
-
-setInterval(group,15000);
-```
+	};
+	timers.add({
+		fun:
+			function A() {
+				console.log("A fired");
+			},
+	  		interval: 2 //2 * 15ms = 30ms
+	});
+	timers.add({
+		fun: 
+			function B() {
+				console.log("B fired");
+			},
+			interval: 4// 4 * 15ms = 60ms
+	});
+	timers.add({
+		fun: 
+			function C() {
+				console.log("C fired");
+		},
+	  interval: 5// 5 * 15ms = 75ms
+	});
+	
+	timers.start();
+	```
