@@ -88,7 +88,7 @@ function distance(x1, x2, y1, y2, z1, z2){
 			if(isNaN(z1)){
 				return distance2D(x1, x2, y1, y2);
 			}
-		console.log('wrong');
+		console.log('Insufficient parameters');
 		}
 		return distance3D(x1, x2, y1, y2, z1, z2);
 	}
