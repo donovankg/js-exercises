@@ -79,25 +79,29 @@ console.log(typeOf(ataType));
 
     Example: 
     ```javascript
-    function distance(x1, x2, y1, y2, z1, z2){
-	if(isNaN(x1)||isNaN(x2)||isNaN(y1)||isNaN(y2)){
-		return 'Insufficient parameters ';
-	}
-	if(isNaN(z1)||isNaN(z2)){
-		return distance2D(x1, x2, y1, y2, z1, z2);
-	}
+function distance(x1, x2, y1, y2, z1, z2){
+	if((distance.length===4)||(distance.length===6)){
+		if(isNaN(x1)||isNaN(x2)||isNaN(y1)||isNaN(y2)){
+			return 'Insufficient parameters ';
+		}
+		if(isNaN(z2)){
+			if(isNaN(z1)){
+				return distance2D(x1, x2, y1, y2);
+			}
+		console.log('wrong');
+		}
 		return distance3D(x1, x2, y1, y2, z1, z2);
 	}
-	
-	function distance2D(x1, x2, y1, y2){
-		return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
-	}
-	
-	function distance3D(x1, x2, y1, y2, z1, z2){
-		return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2)+Math.pow((z2-z1),2));
-	}
-	 distance(1,  2,  2,  2,  1,  4);
-	     //   x1, x2, y1, y2, z1, z2
+}
+function distance2D(x1, x2, y1, y2){
+	return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+}
+
+function distance3D(x1, x2, y1, y2, z1, z2){
+	return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2)+Math.pow((z2-z1),2));
+}
+ distance(1,  2,  2,  2,  1,  4);
+     //   x1, x2, y1, y2, z1, z2
 
     ```
     Function overloading and validation
