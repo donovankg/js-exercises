@@ -138,6 +138,10 @@ function distance(x1, x2, y1, y2, z1, z2){
 function distance3D(x1, x2, y1, y2, z1, z2){
 	return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2)+Math.pow((z2-z1),2));
 }
+distance (1, 2, 2, 2); // returns 1 (done as part of exercise 5) distance ([1,2], [2,2]); // returns 1 
+
+//distance ([1,2], [2,2,4]); // error: incompatible point data 
+
 
     ```
     
