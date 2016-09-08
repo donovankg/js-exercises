@@ -14,60 +14,77 @@
   Use of closures  
 
 ```javascript
-//Exercise 1
-//Outer function
-var bankInstance = new Bank("mybank");
-var acc = bankInstance.createAccount("long",1,"hi");
-acc.getNumber("hi");
-var anishacct = bankInstance.createAccount("Anish", 100000,"gohome");
-anishacct.getNumber("gohome");
-//Inner funtion
-function Bank(name){
-	
-	var accounts={};
-	var id=1;
-	this.name=name;
-	this.createAccount=function account(name, balance,key) {
-		var accId=id++;
-		accounts[accId]={
-			name:name,
-			amount:balance
-		};
-	return {
-		getNumber: function (key1) {
-			if(key==key1)
-			return { 
-				name: accounts[accId].name,
-				amount: accounts[accId].amount
-			};
-				
-		},
-		
-//balance
-		getBalance: function(key1) {
-			if(key==key1)
-			return accounts[accId].balance;
-		
-		},
-//deposit
-		deposit: function(money) {
-			balance += money;
-			return balance;
-		},
-//deposit		
-		withdraw: function(cash) {
-			if (balance > cash){
-				balance -= cash;
-				return balance;
-			}
-		
-		return "Insufficient funds";
-		
-		}
-	};
+/*
+    A bank that holds client’s information:
+        account number;
+        balance
+    A set of clients where each can:
+        hold money of their own; //good
+        deposit money into the bank (to any account); //good
+        retrieve money from the bank (from personal account only); //good
+        view current balance in bank (from personal account only)  //good
+    A client cannot deposit more money than what it has; //good
+    A client cannot retrieve more money that what is in its account; //good
+    All financial information must be private //goodd
 
-};
+Use of closures 
+
+*/
+
+
+var bankIstance = new Bank("myBank"); 
+var user1 = bankIstance.newUser('asd',100,'pass1');
+var user2 = bankIstance.newUser('asd',200,'pass2');
+function Bank(name){
+
+	var id = 0;
+	var accounts={};
+	this.newUser = function(user, balance, key){
+		var accId = id++;
+		accounts[accId]={
+			name: user,
+			balance: balance,
+
+		};
+		return {
+			getBalance:function(pass){
+				if(key != pass){
+					return 'password is incorrect';
+				}
+				return accounts[accId].balance;
+				},
+			getWithdrawl:function(pass,amount){
+				if(key != pass){
+					return 'password is incorrect';
+				}
+				if(amount > accounts[accId].balance){
+					return 'your account lacks the amount of funds for this transaction';
+				}
+				accounts[accId].balance-=amount;
+				return accounts[accId].balance;
+				
+				},
+			getDeposit:function(pass, amount){
+				if(key != pass){
+					return 'password is incorrect';
+				}
+				accounts[accId].balance+=amount;	
+				return accounts[accId].balance;
+				},
+		};
+	};
 }
+	//user 1
+	console.log(user1.getBalance('pass1'));//shows balace
+	console.log(user1.getDeposit('pass1',50));//deposits into account
+	console.log(user1.getWithdrawl('pass1',15));//withdrawls from account
+	console.log(user1.getBalance('pass1')); //shows balance
+	console.log(user1.getDeposit('key',50));//incorrect password
+	console.log(user1.getWithdrawl('pass1',15));//withdrawls from account
+	//user 2
+	console.log(user2.getDeposit('pass2',50));//incorrect password
+	console.log(user2.getWithdrawl('pass2',15));//withdrawls from account
+
 
 
 ```
