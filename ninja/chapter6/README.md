@@ -10,42 +10,38 @@
     ```
     Use of inheritance, prototype, and function overwriting. 
     ```javascript
-    function Shape(color){
-	this.pEdges= 0;
-	this.fnDisplay = true;
-	this.color = color;
-}
-//children
-function Quadrilateral(color){
-	fnArea = 'This is the area';
-	fnPerimeter = 'This is the perimeter';
-	Shape.call(this, color);
-}
-function Triangle(color){
-	this.size = 'small';
-	this.color = color;
-	Shape.call(this, color);{
-	this.pEdges = 3;
+	function Shape(color){
+		 this.basic ="its a shape";
+		 this.color = color;
+		 this.pEdges = 0;
+		 this.fnDisplay = 'shown';
 	}
-}
-//grandchild
-function Square(color){
-	this.size= "med";
-	this.color = color;
-	Quadrilateral.call(this, color);
-	this.pEdges = 4;
-}
-
-
-Quadrilateral.prototype = new Shape();
-Square.prototype = new Quadrilateral();
-
-Shape.prototype.test=function(){
-	return " These are both shapes.";
-};
-var sqr = new Square('red');
-var tri = new Triangle('orange');
-console.log(sqr);
-console.log(tri);
-console.log(sqr.test());
+	function Quadrilateral(color, fnArea, fnPerimeter){
+		this.shapeType='Quadrilateral';
+		Shape.call(this,color);
+		this.fnArea = fnArea;
+		this.fnPerimeter = fnPerimeter;
+	}
+	function Triangle(color, fnArea, fnPerimeter){
+		this.shapeType = 'Triangle';
+		this.subShapeType = 'none';
+		this.fnArea = fnArea;
+		this.fnPerimeter = fnPerimeter;
+		Shape.call(this, color);
+	}
+	
+	function Square(color, fnArea, fnPerimeter){
+		this.subShapeType = "Square";
+		Quadrilateral.call(this, color, fnArea, fnPerimeter);
+		
+	}
+	
+	Quadrilateral.prototype = Object.create(Shape.prototype);
+	Triangle.prototype = Object.create(Shape.prototype);
+	Square.prototype = Object.create(Quadrilateral);
+	
+	var sqr = new Square('red', 5, 8);
+	var tri = new Triangle('yellow',3, 4);
+	console.log(sqr);
+	console.log(tri.basic);
 ```
