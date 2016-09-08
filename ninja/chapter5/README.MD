@@ -14,22 +14,6 @@
   Use of closures  
 
 ```javascript
-/*
-    A bank that holds client’s information:
-        account number;
-        balance
-    A set of clients where each can:
-        hold money of their own; //good
-        deposit money into the bank (to any account); //good
-        retrieve money from the bank (from personal account only); //good
-        view current balance in bank (from personal account only)  //good
-    A client cannot deposit more money than what it has; //good
-    A client cannot retrieve more money that what is in its account; //good
-    All financial information must be private //goodd
-
-Use of closures 
-
-*/
 
 
 var bankIstance = new Bank("myBank"); 
