@@ -115,16 +115,30 @@ Example:
 distance (1, 2, 2, 2); // returns 1 (done as part of exercise 5) distance ([1,2], [2,2]); // returns 1 
 distance ([1,2], [2,2,4]); // error: incompatible point data 
 */
-function distance(x1, x2, y1, y2){
-	if((x1===null)||((x2===null))||((y1===null))||((y2===null))){
-	   return console.log('One or more of the values were not numbers');
-	}
-	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){   
-	 return console.log('One or more of the values were null');
-	}
-	return Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2));
+function distance(x1, x2, y1, y2, z1, z2){
+	if((Array.isArray(x1)===true)&&(Array.isArray(x2)===true)){
+		
+		if((x1.length==2)&&(x2.length==2)){
+				var group =[x1, x2];
+				return distance2D(x1[0],x1[1], x2[0], x2[1]);
+			}else if((x1.length==3)&&(x2.length==3)){
+				return distance3D(x1[0],x1[1], x1[2], x2[0], x2[1],x2[2]);
+			}
+		}
+		if(distance.arguments.length==4){
+			return distance2D(x1, x2, y1, y2);
+		}else if (distance.arguments.length==6){
+			return distance3D(x1, x2, y1, y2, z1, z2);	
+		}else{
+			return 'error, wrong number of parameters';
+		}
+}function distance2D(x1, x2, y1, y2){
+	return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
 }
-console.log(distance(1, 2, 2, 2));
+function distance3D(x1, x2, y1, y2, z1, z2){
+	return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2)+Math.pow((z2-z1),2));
+}
+
     ```
     
     Function overloading and validation 
