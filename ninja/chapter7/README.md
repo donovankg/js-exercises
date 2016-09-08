@@ -2,16 +2,17 @@
 
         Example: 
         
-        function hexToRgb(hex) {
-                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-                return result ? {
-                        r: parseInt(result[1], 16),
-                        g: parseInt(result[2], 16),
-                        b: parseInt(result[3], 16)
-                } : null;
-        }
-
-        hexToRgb("#0033ff");
+                function hexToRgb(hex){
+                	var string = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/;
+                	string=hex.match(string);
+                	console.log(string);
+                	var red = parseInt(string[1],16);
+                	var green = parseInt(string[2],16);
+                	var blue = parseInt(string[3],16);
+                	return '('+'r: '+red+', g: '+ green+', b:'+blue+')';
+                }
+        
+                hexToRgb('#0033ff');
 
   Use of regular expressions 
   
