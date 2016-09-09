@@ -87,51 +87,55 @@ function Bank(name){
   Use of memoization and implementation of a simple searching algorithm. 
   ```javascript
   building={
-	F1:{
-		R1:["pc","mouse"],
-		R2:["pc","mouse"]
-	},
-	F2:{
-		R1:["pc","mouse"],
-		R2:["asa","mouse"]
-	},
-	F3:{
-		R1:["pc","mouse"],
-		R2:["asa","mouse"]
-	},
-	F4:{
-		R1:["pc","mouse"],
-		R2:["asa","mouse"]
-	},
-	F5:{
-		R1:["pc","mouse"],
-		R2:["asa","mouse"]
-	}
+  Floor01:{
+      Room101:["pc","mouse","john"],
+      Room102:["pc","mouse","mark"],
+      Office101:["mac","mouse","paul"],
+      Office102:["pc","mouse","sandra"]
+  },
+  Floor02:{
+      Room201:["pc","mouse","marry"],
+      Room202:["asa","mouse","jane"],
+      Office201:["pc","mouse","Sara"],
+      Office202:["pc","mouse","dan"],
+  },
+  Floor03:{
+      Room301:["pc","mouse","derrel"],
+      Room302:["asa","mouse","john"]
+  },
+  Floor4:{
+      Room401:["pc","mouse","steve"],
+      Room402:["mac","mouse","robert"]
+  },
+  Floor05:{
+      Room501:["mac","mouse","cassie"],
+      Room502:["mac","mouse","angie"]
+  }
 };
 
 var searchFn=function(obj,value){
-	var room;
-	var floor;
-	var result=[];
-	function search(obj,value){
-		for(var key in obj){
-			if(Array.isArray(obj[key])){
-				room=key;
-				for(var i=0;i<obj[key].length;i++){
-					if(obj[key][i]==value){
-						result.push("Room: "+room+" Floor "+floor);	
-					}
-				}	
-			}else if(typeof obj[key]== 'object'){
-				floor=key;
-				search(obj[key],value);
-			}
-		}
-	}
-	search(obj,value);
-	return result;
+var room;
+var floor;
+var result=[];
+function search(obj,value){
+    for(var key in obj){
+        if(Array.isArray(obj[key])){
+            room=key;
+            for(var i=0;i<obj[key].length;i++){
+                if(obj[key][i]==value){
+                    result.push(value+ " was found in Room: "+room+", Floor "+floor); 
+                }
+            }   
+        }else if(typeof obj[key]== 'object'){
+            floor=key;
+            search(obj[key],value);
+        }
+    }
+}
+search(obj,value);
+return result;
 };
 
-console.log(searchFn(building,'pc'));
+console.log(searchFn(building,'mac'));
   
   ```
