@@ -64,12 +64,22 @@
  Example: 
 
   ```javascript
-  function limitFunc (fn, num) { ... } 
-  var limited = limitFunc (fn, 2); 
-  limited ();​
-  // executes fine limited ();​
-  // executes fine limited (); ​
-  // does not execute 
+      var limitFunc = function(fn, value){
+    	var count = 0;	
+    	return function(){
+    		if(count < value){
+    		count++;
+    		fn();
+    		}
+    	};
+    };
+    var limited = limitFunc(function(){
+    	console.log('this ran');
+    },2);
+    limited();
+    limited();
+    limited();
+
   ```
 
 
