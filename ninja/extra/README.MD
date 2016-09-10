@@ -2,6 +2,62 @@
   1. descending 
   2. sort by length ascending/descending 
   3. sort by number of consonants ascending/descending.  
+    ```javascript
+          //descending
+      //sort by length ascending/descending
+      //sort by number of consonants ascending/descending.
+      
+      //part 1
+      
+      thisArray = [4, 2, 677, 32, 12, 1];
+      function doArray(values){
+      	var vals = values.sort((function(x, y){
+      		return x - y;
+      	}));
+      	return vals.reverse();
+      }
+      doArray(thisArray);
+      
+      //part 2
+      
+      var part2=['12345','1234','12'];
+      
+      function checkLength(values){
+      //console.log(part2[0].length);
+      	console.log(values.sort(function(x, y){
+      		return y.length - x.length;
+      	}));
+      	console.log(values.sort(function(x, y){
+      		return x.length - y.length;
+      	}));
+      }
+      
+      checkLength(part2);
+      
+      //part 3
+      
+      function checks(value){
+      	total= 0;
+      	run = 0;
+      		var checker =/([b-df-hj-np-tv-z])/g;
+      		var number= value.match(checker);
+      		return number.length;
+      }
+      	
+      var part3 = ['donovan','john','greg','davin'];
+      function checkLength(values){
+      //console.log(part2[0].length);
+      	console.log(values.sort(function(a, b){
+      		return checks(a) - checks(b);
+      	}));
+      		console.log(values.sort(function(a, b){
+      		return checks(b) - checks(a);
+      	}));
+      }
+      checkLength(part3);
+
+    
+    ```
 
 2. Create a function that can limit the execution of other functions to a determined amount of times.  
 
