@@ -7,14 +7,14 @@
 
  Example: 
 
-```javascript
-function limitFunc (fn, num) { ... } 
-var limited = limitFunc (fn, 2); 
-limited ();​
-// executes fine limited ();​
-// executes fine limited (); ​
-// does not execute 
-```
+  ```javascript
+  function limitFunc (fn, num) { ... } 
+  var limited = limitFunc (fn, 2); 
+  limited ();​
+  // executes fine limited ();​
+  // executes fine limited (); ​
+  // does not execute 
+  ```
 
 
 3. Create a function that will set the color, font­size, and background color of a DOM element. 
@@ -24,11 +24,11 @@ limited ();​
 4. Create a function that can copy either all or specific properties of an object into another. 
 
  
-```  
-  The functionality should depend on the arguments received.  
-  // properties of objB are copied onto objA copyProp​(objA, objB); 
-  // only properties p1 and p2 from objB are copied over to objA copyProp​(objA, objB, [​“p1”​, ​“p2”​]);  
-```
+  ```  
+    The functionality should depend on the arguments received.  
+    // properties of objB are copied onto objA copyProp​(objA, objB); 
+    // only properties p1 and p2 from objB are copied over to objA copyProp​(objA, objB, [​“p1”​, ​“p2”​]);  
+  ```
 
 5. Create a function that will: 
   1. return the number of vowels in a string 
