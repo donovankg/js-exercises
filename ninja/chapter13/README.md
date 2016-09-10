@@ -25,3 +25,21 @@
 2. Create a button that can only be used 3 times. Indicate the usage of the button using the meter element. Once the button has been pressed three times, it must not activate again. 
 
   Removing events, closures, and form element usage.  
+	```javascript
+		var button = document.getElementsByTagName('button')[0];
+		var meter = document.getElementsByTagName('meter')[0];
+		
+		
+		button.addEventListener('click',fn,true);
+		function removeEvent(){
+			button.removeEventListener('click',fn,true);
+		}
+		function fn(event){
+			
+			meter.value ++;
+			if(meter.value === 3 ){
+				removeEvent();
+			}
+		}
+		https://repl.it/D2jd
+	```
