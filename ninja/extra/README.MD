@@ -85,7 +85,19 @@
 
 3. Create a function that will set the color, font­size, and background color of a DOM element. 
   1. If there are fewer arguments, it should place a default value.  
-  2. Use the "this" parameter to access the values of the DOM element. (e.g. this.color or this.style.color) 
+  2. Use the "this" parameter to access the values of the DOM element. (e.g. this.color or this.style.color)
+  
+	```javascript
+	var div = document.getElementsByTagName('div')[0];
+
+	div.new_function = function(){
+		this.style.color = 'red';
+		this.style.fontSize ="30px";
+	}
+	
+	div.new_function();
+	
+	```
 
 4. Create a function that can copy either all or specific properties of an object into another. 
 
