@@ -116,7 +116,6 @@ a. Example of tree structure:
     	var searchFn=function(value,obj){
 		var room;
 		var floor;
-		var result=[];
 		function search(value,obj){
 			for(var key in obj){
 				console.log(key);
@@ -134,7 +133,6 @@ a. Example of tree structure:
 			}
 		}
 		search(value,obj);
-		return result;
 	};
 	A={
 		a:['aa'],
