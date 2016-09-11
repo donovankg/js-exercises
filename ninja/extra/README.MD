@@ -90,12 +90,23 @@
 	```javascript
 	var div = document.getElementsByTagName('div')[0];
 
-	div.new_function = function(){
-		this.style.color = 'red';
-		this.style.fontSize ="30px";
+	div.new_function = function(setColor,setFontSize,setBGColor){
+		if(setColor==undefined){
+			setColor='yellow';
+		}
+		if(setFontSize==undefined){
+			setFontSize='25px';
+		}
+		if(setBGColor===undefined){
+			setBGColor='green'
+		}
+		this.style.color = setColor;
+		this.style.fontSize =setFontSize;
+		this.style.backgroundColor =setBGColor;
 	}
 	
-	div.new_function();
+	div.new_function('red','30px','lightblue');
+	//div.new_function();
 	
 	```
 
