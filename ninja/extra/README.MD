@@ -114,55 +114,36 @@ a. Example of tree structure:
                          cba  
   ```                       
     var searchFn=function(value,obj){
-        
-    var room;
-    var floor;
-    var result=[];
-    function search(value,obj){
-    
-    for(var key in obj){
-              console.log(key);//prints
-              
-    	if(Array.isArray(obj[key])){
-  		for(var i=0;i<obj[key].length;i++){
-  			
-            if(Array.isArray(obj[key][i])){
-            	console.log('    '+obj[key][i]);
-            }else{
-            	console.log('  '+obj[key][i]);
-            }
-  			
-  		}   
-        }else if(typeof obj[key]== 'object'){
-            
-            search(value,obj[key]);
-        }
-      
-    }
-    	
-    }
-  	  search(value,obj);
-    return result;
-  }
-  A={
-  	a:['aa'],
-  	b:['ba','bb'],
-  	c:['ca','cb',['cba']]
-  };
-  
-  //console.log(0,A);
-  searchFn(0,A)
+	var room;
+	var floor;
+	var result=[];
+	function search(value,obj){
+		for(var key in obj){
+			console.log(key);
+			if(Array.isArray(obj[key])){
+				for(var i=0;i<obj[key].length;i++){
+					if(Array.isArray(obj[key][i])){
+						console.log('    '+obj[key][i]);
+					}else{
+						console.log('  '+obj[key][i]);
+					}
+				}
+			}else if(typeof obj[key]== 'object'){
+				search(value,obj[key]);
+			}
+		}
+	}
+	search(value,obj);
+	return result;
+};
+A={
+	a:['aa'],
+	b:['ba','bb'],
+	c:['ca','cb',['cba']]
+};
 
-  \\Print Example
-    A
-      a
-        aa
-      b
-        ba
-        bb
-      c
-        ca
-        cb
-          cba
+//console.log(0,A);
+searchFn(0,A)
+
   
   ```
