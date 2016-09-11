@@ -112,7 +112,7 @@ a. Example of tree structure:
           aa  ba bb  ca  cb 
                          | 
                          cba  
-  ```                       
+  ```javascript
     	var searchFn=function(value,obj){
 		var room;
 		var floor;
