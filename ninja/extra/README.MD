@@ -122,7 +122,23 @@
 5. Create a function that will: 
   1. return the number of vowels in a string 
   2. return the number of digits in a whole number using logarithm operations. Must be the same function. 
- 
+ 	```javascript
+ 	var string = "donovan was here";
+	var checkString=function(string){
+	var matchThis;
+		if(isNaN(string)){
+			matchThis= string.match(/[aeiou]/gi);
+		}
+		var vowelsTot=matchThis.length;
+		matchThis= Math.log10(vowelsTot)+1;
+		return Math.floor(matchThis);
+	
+};
+
+
+checkString(string);
+
+ 	```
 
 6. Create a tree structure and a function that will display all of the elements in that tree. The function should not require any change in case the structure changes. 
 
