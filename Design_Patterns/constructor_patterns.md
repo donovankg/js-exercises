@@ -49,4 +49,12 @@ Constructor Patterns are used to create specific objects and creating properties
 
 
     console.log(obj);
+    //output
+    //  { tires: 4,
+    //    doors: 5,
+    //    color: 'red',
+    //    radio: 'works',
+    //    headlights: 'two lights' }
 ```
+
+https://repl.it/D9nS/1
