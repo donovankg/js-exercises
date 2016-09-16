@@ -88,37 +88,31 @@
   2. Use the "this" parameter to access the values of the DOM element. (e.g. this.color or this.style.color)
   
 	```javascript
-/*
-Create a function that will set the color, font­size, and background color of a DOM element.
-
-If there are fewer arguments, it should place a default value.
-Use the "this" parameter to access the values of the DOM element. (e.g. this.color or this.style.color)
-*/
-
-var div = document.getElementsByTagName('div')[0];
-
-var colorFn = function(setColor,setFontSize,setBGColor){
-    if(setColor===undefined){
-		setColor='yellow';
-    }
-    if(setFontSize===undefined){
-        setFontSize='25px';
-    }
-    if(setBGColor===undefined){
-        setBGColor='green';
-    }
-    this.style.color = setColor;
-    this.style.fontSize = setFontSize;
-    this.style.backgroundColor = setBGColor;
-};
-
-colorFn.call(div,"purple","40px","red");
-//div.colorFn('red','30px','lightblue');
-div.colorFn();
-
-for(var key in div){
-	console.log(key);
-}
+		
+		var div = document.getElementsByTagName('div')[0];
+		
+		var colorFn = function(setColor,setFontSize,setBGColor){
+		    if(setColor===undefined){
+				setColor='yellow';
+		    }
+		    if(setFontSize===undefined){
+		        setFontSize='25px';
+		    }
+		    if(setBGColor===undefined){
+		        setBGColor='green';
+		    }
+		    this.style.color = setColor;
+		    this.style.fontSize = setFontSize;
+		    this.style.backgroundColor = setBGColor;
+		};
+		
+		colorFn.call(div,"purple","40px","red");
+		//div.colorFn('red','30px','lightblue');
+		div.colorFn();
+		
+		for(var key in div){
+			console.log(key);
+		}
 	
 	```
 
