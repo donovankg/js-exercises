@@ -165,34 +165,49 @@ a. Example of tree structure:
         cb
           cba
 */
-		var searchFn=function(obj){
-			var room;
-			var floor;
-			function search(obj){
-				for(var key in obj){
-					console.log(key);
-					if(Array.isArray(obj[key])){
-						for(var i=0;i<obj[key].length;i++){
-							if(Array.isArray(obj[key][i])){
-								console.log('    '+obj[key][i]);
-							}else{
-								console.log('  '+obj[key][i]);
-								
-							}
-						}
-					}else if(typeof obj[key]== 'object'){
-						search(obj[key]);
-					}
-				}
-			}
-			search(obj);
-		};
+		v/*
+\\Print Example
+    A
+      a
+        aa
+      b
+        ba
+        bb
+      c
+        ca
+        cb
+          cba
+*/
 		A={
-			a:['aa'],
-			b:['ba','bb'],
-			c:['ca','cb',['cba']]
+			a:{
+				aa:'aa'
+			},
+			b:{
+				ba:'ba',
+				bb:'bb'
+			},
+			c:{
+				ca:'ca',
+				cb:{
+					cba:'cba'
+				}
+			},
 		};
-		
-		//console.log(0,A);
-		searchFn(A)
+var count = 1;
+function makeTree(tree){
+	for(var key in tree){
+		if(typeof tree[key]==="object"){
+			console.log("  ".repeat(count)+(key));
+			count++;
+			makeTree(tree[key]);
+			
+		}else{
+			console.log("  ".repeat(count)+tree[key]);	
+		}
+	}
+	count--;
+	
+}
+makeTree(A);
+
   ```
