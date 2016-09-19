@@ -8,7 +8,7 @@ https://repl.it/Dc0g/0
         // a 
         // square 
         // display:inline­block // something important 
-          function printAttr(elem,ar){
+          function printAttr(elem,arr){
             var attrib =elem.attributes;
             for (var i=0; i<arr.length; i++){
               var k = arr[i];
