@@ -160,8 +160,18 @@
           text: ...should never use yolo for any reason...
           input. String: yolo 
           output. ... should never use #yolo for any reason ...  
-                var string ="...should never use yolo for any reason...";
-                function replace(value1, value2){
-                        return string.replace(value1, value2);
-                }
-                replace("yolo","#yolo");
+                
+                https://repl.it/DdKZ/2
+```javascript
+var userInput ="yolo";
+var answer = document.getElementById("string");
+var text=answer.textContent;
+var aHtml='<a href=http://twitter.com> #'+userInput+'</a>';
+
+
+function replace(value1, value2){
+	var regex=new RegExp(value1,'g'); 
+	answer.innerHTML=text.replace(regex, value2);
+      }
+replace(userInput,aHtml);
+```
