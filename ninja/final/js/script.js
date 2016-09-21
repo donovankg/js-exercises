@@ -25,12 +25,11 @@
 
 //remove note
 var removeNote = function (event){
-	if(addNote.children[1]){
-	event.target.parentNode.remove();
-}
-	console.log('deleted',event.target);
-//	console.log(article.childElementCount)
-
+	if(event.target.className=="xBtn"){
+		event.target.parentNode.remove();
+	}
+	//console.log(event.target)
+	//console.log('deleted',event.target);
 }
 article.addEventListener('click',removeNote, false);
 
