@@ -1,7 +1,7 @@
-https://repl.it/DcVQ/5
+https://repl.it/DcVQ/7
   ```javascript
   
- function fn(pickAnimal, color, age){
+function fn(pickAnimal, color, age){
 	function Animal(){
 		this.animalType = 'blank';
 		this.legs = 4;
@@ -14,24 +14,29 @@ https://repl.it/DcVQ/5
 	}
 	var x = new Animal();
 	if(pickAnimal =="cat"){
+		Cat();
+	}else if(pickAnimal == "dog"){
+		Dog();
+	}
+	function Cat(){
 		x.animalType = pickAnimal;
 		x.diet = "fish";
 		x.speed = "slow";
 		x.says= 'meow';
 		x.age = age;
 		x.color = color;
-	}else if(pickAnimal=="dog"){
+		console.log(x);
+	}
+	function Dog(){
 		x.animalType = pickAnimal;
 		x.diet = "bacon";
 		x.speed = "fast";
 		x.says = "woof";
 		x.age = age;
 		x.color = color;
-	}
-	
-	return x;
+		console.log(x);
+		}
 }
-
-console.log(fn('cat', 'yellow','10'));
-console.log(fn('dog', 'brown', '14'));
+fn('cat', 'yellow','10');
+fn('dog', 'brown', '14');
 ```
