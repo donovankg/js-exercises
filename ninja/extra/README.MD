@@ -118,54 +118,47 @@
 
 4. Create a function that can copy either all or specific properties of an object into another. 
 
- 
+ https://repl.it/Db4C/3
   ```  
     The functionality should depend on the arguments received.  
-    // properties of objB are copied onto objA copyProp​(objA, objB); 
-    // only properties p1 and p2 from objB are copied over to objA copyProp​(objA, objB, [​“p1”​, ​“p2”​]);  
+    
+	var objA={
+		p1: 'object A',
+		p2: 'object A 2nd'
+	};
 
-			var objA={
-				p1: 'object A',
-				p2: 'object A 2nd'
-			};
-
-			var objB={
-				p1: 'object B',
-				p2: 'object B 2nd',
-				p3: 'this is new from B',
-				p4: 'also new fom B',
-				p5: 'last from B'
-			};
+	var objB={
+		p1: 'object B',
+		p2: 'object B 2nd',
+		p3: 'this is new from B',
+		p4: 'also new fom B',
+		p5: 'last from B'
+	};
 
 
-			function copyProp(obj1, obj2,arr){
-					//copy form B to also
-					//copy P3 + 4 to objA
-					
-				
-				if(arguments.length < 3){
-					for(var k in obj2){
-					//if(!obj1[k]) //allows to copy the priorties if they aren't already in the obj
-						obj1[k]=obj2[k];
-					}
-				}else{
-					for(var x=0; x < arr.length; x++){
-						for(var key in obj2){
-						//console.log(key);
-						//	console.log(arr[x]);
-							//this will copy only set priorties over
-							if(key==arr[x]){
-								//console.log('yes');
-								obj1[key]=obj2[key];
-							}
-						}
-					}
-				}
-				
-				console.log(obj1);
+	function copyProp(obj1, obj2,arr){
+			//copy form B to also
+			//copy P3 + 4 to objA
+
+
+		if(arguments.length < 3){
+			for(var k in obj2){
+			//if(!obj1[k]) //allows to copy the priorties if they aren't already in the obj
+				obj1[k]=obj2[k];
 			}
-			copyProp(objA, objB,['p1', 'p2']);
-			copyProp(objA, objB);
+		}else{
+				for(var key in obj2){
+						obj1[key]=obj2[key];
+
+				}
+
+		}
+
+		console.log(obj1);
+	}
+
+
+
   ```
 
 5. Create a function that will: 
