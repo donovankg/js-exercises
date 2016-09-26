@@ -1,18 +1,27 @@
-https://repl.it/DdPo/0
+https://repl.it/DdPo/2
 ```javascript
 
 
-  var textBook = function(pageCount, topic){
-  	this.pageCount = pageCount;
-  	this.topic = topic;
-  };
-  var histBook = new textBook();
-  var values = function (pageCount, topic, Authors){
-  	textBook.call(this, pageCount, topic);
-  	this.Authors = Authors;
-  };
-  histBook.prototype = Object.create( textBook);
-  var texasHistoy = new values(450,"Texas History",["bob","dan","greg","marry"]);
-  console.log( texasHistoy);
+ var Books = function(histType, Author){
+	this.textBook = function(){
+		return "you have selected: "+subjectHist()+getAuthor();
+	};
+	var subjectHist = function(){
+		if(histType = "texas"){
+			return "Texas History, ";
+		}else{
+			return "unknown histoy type, ";
+		}
+	};
+	var getAuthor = function(){
+		if(Author = 'jim'){
+			return 'Jim Smith';
+		}else{
+			return 'unknown author';
+		}
+	};
+};
+var histBook = new Books();
+histBook.textBook('texas','jim');
 
 ```
