@@ -1,23 +1,28 @@
-https://repl.it/Dct8/1
+https://repl.it/Dct8/2
 
 ```javascript
 
 
-    var limitFunc = function(fn, value){
-        var count = 0;  
-        return function(){
-            if(count < value){
-            count++;
-            fn();
-            }
-        };
-    };
-    var limited = limitFunc(function(){
-        console.log('this ran');
-    },1);
-    limited();
-    limited();
-    limited();
+    var wrapperFn = (function(){
+	var checker;
+	function singleton(){
+		var speical = "Today's speical is a #2 w/ fries";
+		return speical;
+	}
+	return {
+		instnceCheck: function(){
+			if(!checker){
+				checker = singleton();
+				console.log(checker);
+			}else{
+				return console.log("singleton already ran")
+			}
+		}
+	};
+})();
+
+wrapperFn.instnceCheck();
+wrapperFn.instnceCheck();
 
 
 ```
