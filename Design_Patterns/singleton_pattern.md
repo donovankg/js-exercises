@@ -1,9 +1,7 @@
-https://repl.it/Dct8/2
+https://repl.it/Dct8/3
 
 ```javascript
-
-
-    var wrapperFn = (function(){
+var wrapperFn = (function(){
 	var checker;
 	function singleton(){
 		var speical = "Today's speical is a #2 w/ fries";
@@ -15,7 +13,7 @@ https://repl.it/Dct8/2
 				checker = singleton();
 				console.log(checker);
 			}else{
-				return console.log("singleton already ran")
+				return console.log(checker);
 			}
 		}
 	};
@@ -23,6 +21,11 @@ https://repl.it/Dct8/2
 
 wrapperFn.instnceCheck();
 wrapperFn.instnceCheck();
-
+wrapperFn.instnceCheck();
+wrapperFn.instnceCheck();
+wrapperFn.instnceCheck();
+wrapperFn.instnceCheck();
+wrapperFn.instnceCheck();
+wrapperFn.instnceCheck();
 
 ```
