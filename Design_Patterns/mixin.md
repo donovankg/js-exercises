@@ -1,27 +1,21 @@
-https://repl.it/DdPo/2
+https://repl.it/DdPo/3
 ```javascript
 
 
- var Books = function(histType, Author){
-	this.textBook = function(){
-		return "you have selected: "+subjectHist()+getAuthor();
-	};
-	var subjectHist = function(){
-		if(histType = "texas"){
-			return "Texas History, ";
-		}else{
-			return "unknown histoy type, ";
-		}
-	};
-	var getAuthor = function(){
-		if(Author = 'jim'){
-			return 'Jim Smith';
-		}else{
-			return 'unknown author';
-		}
-	};
+var Book = function( author, subject){
+	this.ed = "5th edition";
+	this.author = author;
 };
-var histBook = new Books();
-histBook.textBook('texas','jim');
+
+var PrintCopy = function(author, bookinfo, pubInfo){
+	Book.call(this,author);
+
+	this.pubInfo = pubInfo;
+	this.bookinfo = bookinfo;
+};
+
+PrintCopy.prototype = Object.create(Book.prototype);
+var tx6thEd = new PrintCopy ("Greg Allen", ["Tx History",'pages 450'], ["Ny new paper","1234 main street, YNC"]);
+console.log(tx6thEd);
 
 ```
