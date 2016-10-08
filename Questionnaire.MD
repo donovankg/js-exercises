@@ -3,7 +3,7 @@
 ###Javascript General
 
 1. How do you debug web applications?
-    two main ways. console.log(); in different places of the code to see whats running and what the varaiables are to make the code         work. the other way is the use of the developer tools (f12 for windows) and (right click dev tools for mac).
+   *  two main ways. console.log(); in different places of the code to see whats running and what the varaiables are to make the code         work. the other way is the use of the developer tools (f12 for windows) and (right click dev tools for mac).
 2. Explain OOP concepts used in JavaScript?
 3. Can inheritance be done without using prototype? Explain your answer.
 4. Explain the use of a hash-map in JS.
