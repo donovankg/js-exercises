@@ -16,6 +16,7 @@
 7. What is an object literal?
 8. Explain how string types work. How can you manipulate a string efficiently?
 9. What is the difference between 1 == "1" and 1 === "1" .
+* the first will return true, the 2nd false. the first looks to see if the characters match and JS will covert it from number to string and back, the 2nd checks to see if they are a match not only in character but in type as well (string, int, etc).
 10. Explain the use of the var keyword. What happens if it is not used?
 11. Explain the next object methods
     1. Object.freeze
