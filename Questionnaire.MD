@@ -13,14 +13,14 @@
 5. Explain the use of arrays in JS.
   * arrays, as in any langauge, are able to store limitless amount of data into a single variable. 
 6. Explain the use of the following methods
-    1. Array.prototype.some()
-    2. Array.prototype.reduce()
-    3. Array.prototype.every()
-    4. Array.prototype.map()
+    1. Array.prototype.some() it will check to see if at least one of the args returns back true.
+    2. Array.prototype.reduce() it allows the callback to hold the current and previous values.
+    3. Array.prototype.every() checks everything in an array for the values to be true else returns back false if any of them are false.
+    4. Array.prototype.map() takes the arg and allows you to callback each element in an array.
 7. What is an object literal?
 8. Explain how string types work. How can you manipulate a string efficiently?
 9. What is the difference between 1 == "1" and 1 === "1" .
-    * the first will return true, the 2nd false. the first looks to see if the characters match and JS will covert it from number to 
+    * the first will return true, the 2nd false. the first looks to see if the character’s match and JS will covert it from number to 
       string and back, the 2nd checks to see if they are a match not only in character but in type as well (string, int, etc).
 10. Explain the use of the var keyword. What happens if it is not used?
 11. Explain the next object methods
