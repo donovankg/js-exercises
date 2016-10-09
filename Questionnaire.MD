@@ -48,11 +48,11 @@
     1. Object.freeze
     	* a method that stops new properties from being added to the object.
     2. Object.seal
-	* a method that stops new properties from being added and makes existing properties non-configurable.
+    	* a method that stops new properties from being added and makes existing properties non-configurable.
     3. Object.defineProperty
-	* defines a new property that’s directly on an object or modifies an existing property on an object and returns it.
+    	* defines a new property that’s directly on an object or modifies an existing property on an object and returns it.
     4. Object.create
-	* makes a new object with a specified prototype  and properties.
+    	* makes a new object with a specified prototype  and properties.
 11. When should you return null and when should you return undefined?
   	* you shouldn’t use null. It’s a bad habit. 
 12. Is JavaScript pass by reference or pass by value?
