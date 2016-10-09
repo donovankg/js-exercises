@@ -46,7 +46,7 @@
 	* var makes characters into a variable. Most of the times it will return something as undefined.  Even when it doesn’t it’s still best practice to define things as a variable. 
 11. Explain the next object methods
     1. Object.freeze
-	* a method that stops new properties from being added to the object.
+    	* a method that stops new properties from being added to the object.
     2. Object.seal
 	* a method that stops new properties from being added and makes existing properties non-configurable.
     3. Object.defineProperty
