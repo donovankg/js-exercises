@@ -103,31 +103,29 @@
 ###Patterns 
 
 1.	What is a singleton and how do you create one in JavaScript?
-a.	
+	*
 2.	What is the module pattern and how do you apply it?
-a.	
+	*	
 3.	What is the revealing pattern?
-a.	
+	*	
 4.	What is the facade pattern?
-a.	
+	*	
 5.	What is the factory pattern?
-a.	
+	*	
 
 ###Best Practices
 
 1.	Explain the effect of 'use strict'?
-a.	
+	* 	
 2.	What are some ways of improving performance in JavaScript?
-a.	
+	*	
 3.	Mention a few JS OOP best practices.
-a.	
+	*	
 4.	What is unobtrusive javascript?
-a.	
+	*	
 5.	List 5 good and 5 bad practices of JavaScript
-a.	
+	*	
 6.	What is the same origin policy?
-a.	
+	*	
 7.	Explain how thread safety works in JavaScript
-a.	
-
-
+	*	
