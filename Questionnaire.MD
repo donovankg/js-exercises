@@ -33,14 +33,20 @@
     3. Object.defineProperty
     4. Object.create
 11. When should you return null and when should you return undefined?
+  * 
 12. Is JavaScript pass by reference or pass by value?
+  * By value.
 13. If you want to use an arbitrary object as the value of this, how would you do that?
+  * 
 14. Explain the use of call and apply.
+  * 
 15. Explain how the bind function works
     1. If an older browser does not have the bind function, how will you shim it?
     2. Create an Example
 16. How would you implement currying for any function?
+  *
 17. What is a closure?
+  * 
 18. What is AJAX.
 19. Explain how JS can interact with RESTful APIs.
 20. Explain how hoisting works.
