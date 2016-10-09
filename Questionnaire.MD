@@ -7,6 +7,7 @@
 2. Explain OOP concepts used in JavaScript?
     * Object-oriented programming. Javascript simulators true OOP from other languages like java, C etc. JS takes name spaces and applies properties (variables, methods, functions) to them. 
 3. Can inheritance be done without using prototype? Explain your answer.
+    * javascript requires prototypes to do inheritance because it properties from one object to another.
 4. Explain the use of a hash-map in JS.
 5. Explain the use of arrays in JS.
 6. Explain the use of the following methods
