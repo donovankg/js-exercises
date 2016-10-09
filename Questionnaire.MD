@@ -14,9 +14,9 @@
   * arrays, as in any langauge, are able to store limitless amount of data into a single variable. 
 6. Explain the use of the following methods
     1. Array.prototype.some() 
-      * it will check to see if at least one of the args returns back true.
+	* it will check to see if at least one of the args returns back true.
     2. Array.prototype.reduce() 
-      * it allows the callback to hold the current and previous values.
+	* it allows the callback to hold the current and previous values.
     3. Array.prototype.every() 
       * checks everything in an array for the values to be true else returns back false if any of them are false.
     4. Array.prototype.map() 
