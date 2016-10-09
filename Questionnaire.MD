@@ -32,7 +32,7 @@
 ```
 8. Explain how string types work. How can you manipulate a string efficiently?
 	* a variable that has “ sample” will be set as a string. It can be manipulated by dot notation. Examples would be as follows:
-``javascript
+```javascript
 var txt = 'this is a test';
 console.log(txt);
 console.log(txt.length);
