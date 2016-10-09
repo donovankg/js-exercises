@@ -24,10 +24,10 @@
 7. What is an object literal?
 	* its simply an object that has everything separated by commas in a list.
 	```Javascript
-		Var cat = {
-	Feet: 4,
-	Talks : ‘meow’,
-	Fleas: true
+	Var cat = {
+		Feet: 4,
+		Talks : ‘meow’,
+		Fleas: true
 };
 ```
 8. Explain how string types work. How can you manipulate a string efficiently?
@@ -58,7 +58,7 @@
 12. Is JavaScript pass by reference or pass by value?
   	* By value.
 13. If you want to use an arbitrary object as the value of this, how would you do that?
-  	* 
+  	* you would need to first use the function.prototype.bind function method, it would take the arbitrary object as its first argument and it would serve as ‘this’ for the function call.
 14. Explain the use of call and apply.
   	* 
 15. Explain how the bind function works
