@@ -11,6 +11,7 @@
 4. Explain the use of a hash-map in JS.
     * hash maping allows you to add properties into a object very easily. if you have an object (var pets = {}) then you would be able to add them like so, pets.dog = {name="bob", age: 5}. then if you wanted to print all of animal you could console.log(animal) or do (animal.dog) to get just the information you just entered.
 5. Explain the use of arrays in JS.
+  * arrays, as in any langauge, are able to store limitless amount of data into a single variable. 
 6. Explain the use of the following methods
     1. Array.prototype.some()
     2. Array.prototype.reduce()
