@@ -31,13 +31,13 @@
 };
 ```
 8. Explain how string types work. How can you manipulate a string efficiently?
-	* a variable that has “ sample” will be set as a string. It can be manipulated by dot notation. Examples would be as 			follows:
-	```javascript
-	var txt = 'this is a test';
-	console.log(txt);
-	console.log(txt.length);
-	console.log(txt.indexOf('test'));
-	```
+	* a variable that has “ sample” will be set as a string. It can be manipulated by dot notation. Examples would be as follows:
+``javascript
+var txt = 'this is a test';
+console.log(txt);
+console.log(txt.length);
+console.log(txt.indexOf('test'));
+```
 9. What is the difference between 1 == "1" and 1 === "1" .
     * the first will return true, the 2nd false. the first looks to see if the character’s match and JS will covert it from number to 
       string and back, the 2nd checks to see if they are a match not only in character but in type as well (string, int, etc).
@@ -45,15 +45,15 @@
 	* var makes characters into a variable. Most of the times it will return something as undefined.  Even when it doesn’t it’s still best practice to define things as a variable. 
 11. Explain the next object methods
     1. Object.freeze
-	*
+	* a method that stops new properties from being added to the object.
     2. Object.seal
-	*
+	* a method that stops new properties from being added and makes existing properties non-configurable.
     3. Object.defineProperty
-	*
+	* defines a new property that’s directly on an object or modifies an existing property on an object and returns it.
     4. Object.create
-*
+* makes a new object with a specified prototype  and properties.
 11. When should you return null and when should you return undefined?
-  * 
+  * you shouldn’t use null. It’s a bad habit. 
 12. Is JavaScript pass by reference or pass by value?
   * By value.
 13. If you want to use an arbitrary object as the value of this, how would you do that?
