@@ -52,15 +52,15 @@
     3. Object.defineProperty
 	* defines a new property that’s directly on an object or modifies an existing property on an object and returns it.
     4. Object.create
-* makes a new object with a specified prototype  and properties.
+	* makes a new object with a specified prototype  and properties.
 11. When should you return null and when should you return undefined?
-  * you shouldn’t use null. It’s a bad habit. 
+  	* you shouldn’t use null. It’s a bad habit. 
 12. Is JavaScript pass by reference or pass by value?
-  * By value.
+  	* By value.
 13. If you want to use an arbitrary object as the value of this, how would you do that?
-  * 
+  	* 
 14. Explain the use of call and apply.
-  * 
+  	* 
 15. Explain how the bind function works
     1. If an older browser does not have the bind function, how will you shim it?
 	*
