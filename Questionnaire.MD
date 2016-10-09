@@ -31,7 +31,13 @@
 };
 ```
 8. Explain how string types work. How can you manipulate a string efficiently?
-	* 
+	* a variable that has “ sample” will be set as a string. It can be manipulated by dot notation. Examples would be as 			follows:
+	``javascript
+		var txt = 'this is a test';
+		console.log(txt);
+		console.log(txt.length);
+		console.log(txt.indexOf('test'));
+	```
 9. What is the difference between 1 == "1" and 1 === "1" .
     * the first will return true, the 2nd false. the first looks to see if the character’s match and JS will covert it from number to 
       string and back, the 2nd checks to see if they are a match not only in character but in type as well (string, int, etc).
