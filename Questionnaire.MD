@@ -22,16 +22,30 @@
     4. Array.prototype.map() 
       * takes the arg and allows you to callback each element in an array.
 7. What is an object literal?
+	* its simply an object that has everything separated by commas in a list.
+	```Javascript
+		Var cat = {
+	Feet: 4,
+	Talks : ‘meow’,
+	Fleas: true
+};
+```
 8. Explain how string types work. How can you manipulate a string efficiently?
+	* 
 9. What is the difference between 1 == "1" and 1 === "1" .
     * the first will return true, the 2nd false. the first looks to see if the character’s match and JS will covert it from number to 
       string and back, the 2nd checks to see if they are a match not only in character but in type as well (string, int, etc).
 10. Explain the use of the var keyword. What happens if it is not used?
+	* var makes characters into a variable. Most of the times it will return something as undefined.  Even when it doesn’t it’s still best practice to define things as a variable. 
 11. Explain the next object methods
     1. Object.freeze
+	*
     2. Object.seal
+	*
     3. Object.defineProperty
+	*
     4. Object.create
+*
 11. When should you return null and when should you return undefined?
   * 
 12. Is JavaScript pass by reference or pass by value?
@@ -42,46 +56,78 @@
   * 
 15. Explain how the bind function works
     1. If an older browser does not have the bind function, how will you shim it?
+	*
     2. Create an Example
+	*
 16. How would you implement currying for any function?
   *
 17. What is a closure?
   * 
 18. What is AJAX.
+	*
 19. Explain how JS can interact with RESTful APIs.
+	*
 20. Explain how hoisting works.
+	*
 21. What are the different way of accessing an object's properties? Explain the difference.
+	*
 22. How would you compare two objects in JavaScript?
+	*
 23. What is the this keyword?
+	*
 24. What are event bubbling and capturing?
+	*
 25. What does mean event delegation? How to use it?
+	*
 26. How can event propagation be stopped?
+	*
 27. How can event default behavior be prevented?
+	*
 28. Explain the use of timers. Name some of their drawbacks.
+	*
 29. What is the difference between function declaration and function expression?
+	*
 30. What is an Immediately-Invoked Function Expression (IIFE)?
+	*
 31. What is the default value of javascript variables?
+	*
 32. What happens if there is no return statement in a function?
+	*
 32. How do you add items to the DOM using JavaScript?
+	*
 33. If there are two elements with the same id, which element will be returned by getElementById()?
+	*
 34. What are DocumentFragments?
+	*
 
 ###Patterns 
 
-1. What is a singleton and how do you create one in JavaScript?
-2. What is the module pattern and how do you apply it?
-3. What is the revealing pattern?
-4. What is the facade pattern?
-5. What is the factory pattern?
+1.	What is a singleton and how do you create one in JavaScript?
+a.	
+2.	What is the module pattern and how do you apply it?
+a.	
+3.	What is the revealing pattern?
+a.	
+4.	What is the facade pattern?
+a.	
+5.	What is the factory pattern?
+a.	
 
 ###Best Practices
 
-1. Explain the effect of 'use strict'?
-2. What are some ways of improving performance in JavaScript?
-3. Mention a few JS OOP best practices.
-4. What is unobtrusive javascript?
-5. List 5 good and 5 bad practices of JavaScript
-6. What is the same origin policy?
-7. Explain how thread safety works in JavaScript
+1.	Explain the effect of 'use strict'?
+a.	
+2.	What are some ways of improving performance in JavaScript?
+a.	
+3.	Mention a few JS OOP best practices.
+a.	
+4.	What is unobtrusive javascript?
+a.	
+5.	List 5 good and 5 bad practices of JavaScript
+a.	
+6.	What is the same origin policy?
+a.	
+7.	Explain how thread safety works in JavaScript
+a.	
 
 
