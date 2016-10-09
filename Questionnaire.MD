@@ -60,9 +60,9 @@
     2. Create an Example
 	*
 16. How would you implement currying for any function?
-  *
+  	*
 17. What is a closure?
-  * 
+  	* 
 18. What is AJAX.
 	*
 19. Explain how JS can interact with RESTful APIs.
