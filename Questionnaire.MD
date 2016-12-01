@@ -65,7 +65,7 @@
   	* 
 15. Explain how the bind function works
     1. If an older browser does not have the bind function, how will you shim it?
-	*
+	* you would make a prototype of bind to Function.
     2. Create an Example
 	*
 16. How would you implement currying for any function?
