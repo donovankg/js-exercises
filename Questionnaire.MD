@@ -69,7 +69,10 @@
     2. Create an Example
 	*
 16. How would you implement currying for any function?
-  	*
+  	*I would pass arg into a function and return them back.
+	function test(arg){
+		return arg+' said hi.'}
+	test('Bob');
 17. What is a closure?
   	* They are functions that refer to variables that remember the enveriment that they came from.
 18. What is AJAX.
