@@ -93,15 +93,16 @@
 24. What are event bubbling and capturing?
 	* bubbling is when you a child is the target but if you click the parent then it would be targeted as well. capturing is the reverse; the parent has an event or something and the child also has it because of inharatance.
 25. What does mean event delegation? How to use it?
-	*
+	* it allows you to use one function for many events. it prevents there from having many functions that all do the same thing.
 26. How can event propagation be stopped?
 	* Event.stopPropagation() will allow it the be stopped.
 27. How can event default behavior be prevented?
 	*
 28. Explain the use of timers. Name some of their drawbacks.
-	*
+	* it allows you to semiulate loading in the app; you can have a single delay, intervals, and imdedate.
+	draw backs are that you have to wait for them to complete or you may miss that its there if the timer is off.
 29. What is the difference between function declaration and function expression?
-	*
+	* declaration is anything that has a var in front of it or an IIFE. delcarations get hosted while the other does 	   not.
 30. What is an Immediately-Invoked Function Expression (IIFE)?
 	* because js is single thread, when it comes and sees the iife, it is ran right then rather than waiting.
 31. What is the default value of javascript variables?
