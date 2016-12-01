@@ -75,21 +75,24 @@
 18. What is AJAX.
 	* its client side script that allows data to be passed from db without a postback.
 19. Explain how JS can interact with RESTful APIs.
-	* 
+	* by using curd, create, read, update, , delete.
 20. Explain how hoisting works.
 	* as the page is loaded, all the declared items are moved to the top in memory so they can be put into memory first.
 21. What are the different way of accessing an object's properties? Explain the difference.
-	*
+	* for(key in Obj){
+	     obj[key]	
+	  }
+	  this will allow you to access each of the perporties.
 22. How would you compare two objects in JavaScript?
 	* I'd use object.is(). you place the two objs in and it would return true or false.
 23. What is the this keyword?
 	* this refers to the enverienment that it was created in.
 24. What are event bubbling and capturing?
-	* 
+	* bubbling is when you a child is the target but if you click the parent then it would be targeted as well. capturing is the reverse; the parent has an event or something and the child also has it because of inharatance.
 25. What does mean event delegation? How to use it?
 	*
 26. How can event propagation be stopped?
-	*
+	* Event.stopPropagation() will allow it the be stopped.
 27. How can event default behavior be prevented?
 	*
 28. Explain the use of timers. Name some of their drawbacks.
