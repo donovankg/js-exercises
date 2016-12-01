@@ -132,7 +132,7 @@
 3.	Mention a few JS OOP best practices.
 	*	
 4.	What is unobtrusive javascript?
-	*	
+	*	its the seperation of the javascript from the html code.
 5.	List 5 good and 5 bad practices of JavaScript
 	  *good: use wrapper functions, leave comments in your code, use returns, use patterns, use libereries that are 
 	  aviable.
