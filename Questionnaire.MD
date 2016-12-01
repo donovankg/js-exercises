@@ -62,7 +62,7 @@
 13. If you want to use an arbitrary object as the value of this, how would you do that?
   	* you would need to first use the function.prototype.bind function method, it would take the arbitrary object as its first argument and it would serve as ‘this’ for the function call.
 14. Explain the use of call and apply.
-  	* 
+  	* it allows you to use parts of one object into another.
 15. Explain how the bind function works
     1. If an older browser does not have the bind function, how will you shim it?
 	* you would make a prototype of bind to Function.
@@ -105,7 +105,7 @@
 30. What is an Immediately-Invoked Function Expression (IIFE)?
 	* because js is single thread, when it comes and sees the iife, it is ran right then rather than waiting.
 31. What is the default value of javascript variables?
-	*undefined
+	* undefined
 32. What happens if there is no return statement in a function?
 	* no values are returned, you can change variables that are outside that function, log things out, or run
 	other functions though.
@@ -145,6 +145,6 @@
 	  *bad: leaving console.log in, poluting the global scope, using too many divs, not using dynamic elements, not 
 	  backing up your work on a repo.
 6.	What is the same origin policy?
-	*	
+		*	
 7.	Explain how thread safety works in JavaScript
-	*	
+		*	
