@@ -71,19 +71,19 @@
 17. What is a closure?
   	* They are functions that refer to variables that remember the enveriment that they came from.
 18. What is AJAX.
-	*
+	* its client side script that allows data to be passed from db without a postback.
 19. Explain how JS can interact with RESTful APIs.
-	*
+	* 
 20. Explain how hoisting works.
-	*
+	* as the page is loaded, all the declared items are moved to the top in memory so they can be put into memory first.
 21. What are the different way of accessing an object's properties? Explain the difference.
 	*
 22. How would you compare two objects in JavaScript?
-	*
+	* 
 23. What is the this keyword?
-	*
+	* this refers to the enverienment that it was created in.
 24. What are event bubbling and capturing?
-	*
+	* 
 25. What does mean event delegation? How to use it?
 	*
 26. How can event propagation be stopped?
@@ -95,43 +95,46 @@
 29. What is the difference between function declaration and function expression?
 	*
 30. What is an Immediately-Invoked Function Expression (IIFE)?
-	*
+	* because js is single thread, when it comes and sees the iife, it is ran right then rather than waiting.
 31. What is the default value of javascript variables?
-	*
+	*undefined
 32. What happens if there is no return statement in a function?
-	*
+	* no values are returned, you can change variables that are outside that function, log things out, or run
+	other functions though.
 32. How do you add items to the DOM using JavaScript?
-	*
+	* Object.create
 33. If there are two elements with the same id, which element will be returned by getElementById()?
-	*
+	* The first will be returned but its very bad practice to use an ID more than once.
 34. What are DocumentFragments?
-	*
+	* It allows you to put parts of your pages into modules allowing you to use them more than once.
 
 ###Patterns 
 
 1.	What is a singleton and how do you create one in JavaScript?
-	*
+	* it makes it so that if you call a function many times you will still only get the same value or results.
 2.	What is the module pattern and how do you apply it?
-	*	
+	*	module patterns allow you to have private variables so that you don't pollute the global scope.
 3.	What is the revealing pattern?
 	*	
 4.	What is the facade pattern?
 	*	
 5.	What is the factory pattern?
-	*	
+	*	this pattern allows you create new objects.
 
 ###Best Practices
 
 1.	Explain the effect of 'use strict'?
 	* 	
 2.	What are some ways of improving performance in JavaScript?
-	*	
+	*	avoid using repeated code, have it be reusable.
 3.	Mention a few JS OOP best practices.
 	*	
 4.	What is unobtrusive javascript?
 	*	
 5.	List 5 good and 5 bad practices of JavaScript
-	*	
+	*good: use wrapper functions, leave comments in your code, use returns, use patterns, use libereries that are aviable.
+	*bad: leaving console.log in, poluting the global scope, using too many divs, not using dynamic elements, not backing 
+	  up your work on a repo.
 6.	What is the same origin policy?
 	*	
 7.	Explain how thread safety works in JavaScript
