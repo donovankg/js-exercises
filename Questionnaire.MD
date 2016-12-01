@@ -3,7 +3,9 @@
 ###Javascript General
 
 1. How do you debug web applications?
-   *  two main ways. console.log(); in different places of the code to see whats running and what the varaiables are to make the code         work. the other way is the use of the developer tools (f12 for windows) and (right click dev tools for mac).
+   *  two main ways. console.log(); in different places of the code to see whats running and what the varaiables are to 
+   make the code work. the other way is the use of the developer tools (f12 for windows) and (right click dev tools for 
+   mac).
 2. Explain OOP concepts used in JavaScript?
     * Object-oriented programming. Javascript simulators true OOP from other languages like java, C etc. JS takes name spaces and applies properties (variables, methods, functions) to them. 
 3. Can inheritance be done without using prototype? Explain your answer.
@@ -132,9 +134,10 @@
 4.	What is unobtrusive javascript?
 	*	
 5.	List 5 good and 5 bad practices of JavaScript
-	*good: use wrapper functions, leave comments in your code, use returns, use patterns, use libereries that are aviable.
-	*bad: leaving console.log in, poluting the global scope, using too many divs, not using dynamic elements, not backing 
-	  up your work on a repo.
+	  *good: use wrapper functions, leave comments in your code, use returns, use patterns, use libereries that are 
+	  aviable.
+	  *bad: leaving console.log in, poluting the global scope, using too many divs, not using dynamic elements, not 
+	  backing up your work on a repo.
 6.	What is the same origin policy?
 	*	
 7.	Explain how thread safety works in JavaScript
