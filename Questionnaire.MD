@@ -79,7 +79,7 @@
 21. What are the different way of accessing an object's properties? Explain the difference.
 	*
 22. How would you compare two objects in JavaScript?
-	* 
+	* I'd use object.is(). you place the two objs in and it would return true or false.
 23. What is the this keyword?
 	* this refers to the enverienment that it was created in.
 24. What are event bubbling and capturing?
