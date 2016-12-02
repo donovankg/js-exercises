@@ -133,19 +133,19 @@
 ###Best Practices
 
 1.	Explain the effect of 'use strict'?
-	* 	
+	* 	it helps prevent errors and makes the site more safe.
 2.	What are some ways of improving performance in JavaScript?
 	*	avoid using repeated code, have it be reusable.
 3.	Mention a few JS OOP best practices.
-	*	
+	*	use design patterns, don't polute the globel scope, make reusable code.
 4.	What is unobtrusive javascript?
 	*	its the seperation of the javascript from the html code.
 5.	List 5 good and 5 bad practices of JavaScript
-	  *good: use wrapper functions, leave comments in your code, use returns, use patterns, use libereries that are 
+	  * good: use wrapper functions, leave comments in your code, use returns, use patterns, use libereries that are 
 	  aviable.
-	  *bad: leaving console.log in, poluting the global scope, using too many divs, not using dynamic elements, not 
+	  * bad: leaving console.log in, poluting the global scope, using too many divs, not using dynamic elements, not 
 	  backing up your work on a repo.
 6.	What is the same origin policy?
-		*	
+		*	it allows the scripts to be used in multiple pages as long as they come from the same origin.
 7.	Explain how thread safety works in JavaScript
-		*	
+		*	there is normally no issues, because JS is single threaded, one thread finishs before another begins.
