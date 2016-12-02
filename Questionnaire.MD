@@ -65,9 +65,9 @@
   	* it allows you to use parts of one object into another.
 15. Explain how the bind function works
     1. If an older browser does not have the bind function, how will you shim it?
-	* you would make a prototype of bind to Function.
+	* you would make a prototype of bind to Function. I would refer to the mdn site on how to apply it https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind
     2. Create an Example
-	*
+	* 
 16. How would you implement currying for any function?
   	*I would pass arg into a function and return them back.
 	function test(arg){
@@ -97,7 +97,7 @@
 26. How can event propagation be stopped?
 	* Event.stopPropagation() will allow it the be stopped.
 27. How can event default behavior be prevented?
-	*
+	* by setting up function that uses event.preventDefault(). it stops whatever event that triggers this function.
 28. Explain the use of timers. Name some of their drawbacks.
 	* it allows you to semiulate loading in the app; you can have a single delay, intervals, and imdedate.
 	draw backs are that you have to wait for them to complete or you may miss that its there if the timer is off.
@@ -124,9 +124,9 @@
 2.	What is the module pattern and how do you apply it?
 	*	module patterns allow you to have private variables so that you don't pollute the global scope.
 3.	What is the revealing pattern?
-	*	
+	*	it displays hidden information in the javascript.
 4.	What is the facade pattern?
-	*	
+	*	its an object that makes it easy to use the data inside it.
 5.	What is the factory pattern?
 	*	this pattern allows you create new objects.
 
